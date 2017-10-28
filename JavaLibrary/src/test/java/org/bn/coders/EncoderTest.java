@@ -183,7 +183,10 @@ public abstract class EncoderTest {
         assertNotNull(encoder);
         printEncoded("TestPRN",encoder, coderTestUtils.createTestPRN());
         checkEncoded(encoder, coderTestUtils.createTestPRN(), coderTestUtils.createTestPRNBytes());
-        
+
+        printEncoded("TestIA5",encoder, coderTestUtils.createTestIA5());
+        checkEncoded(encoder, coderTestUtils.createTestIA5(), coderTestUtils.createTestIA5Bytes());
+
         printEncoded("TestOCT",encoder, coderTestUtils.createTestOCT());
         checkEncoded(encoder, coderTestUtils.createTestOCT(), coderTestUtils.createTestOCTBytes());        
     }

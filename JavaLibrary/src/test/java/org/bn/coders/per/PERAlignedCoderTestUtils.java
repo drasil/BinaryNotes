@@ -111,6 +111,11 @@ public class PERAlignedCoderTestUtils extends CoderTestUtilities {
     }
 
     @Override
+    public byte[] createTestIA5Bytes() {
+        return createTestPRNBytes();
+    }
+
+    @Override
     public byte[] createTestOCTBytes() {
         return new byte[]{0x05, 0x01, 0x02, (byte) 0xFF, 0x03, 0x04};
     }

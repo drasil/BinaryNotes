@@ -221,7 +221,15 @@ public abstract class CoderTestUtilities {
         return value;
     }
 
+    public TestIA5 createTestIA5() {
+        TestIA5 value = new TestIA5();
+        value.setValue("Hello");
+        return value;
+    }
+
     public abstract byte[] createTestPRNBytes();
+
+    public abstract byte[] createTestIA5Bytes();
 
     public TestOCT createTestOCT() {
         TestOCT value = new TestOCT();

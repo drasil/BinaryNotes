@@ -209,6 +209,11 @@ public abstract class DecoderTest {
         assertNotNull(val);
         assertEquals(val.getValue(), coderTestUtils.createTestPRN().getValue());
 
+        stream = new ByteArrayInputStream(coderTestUtils.createTestIA5Bytes());
+        TestIA5 valIA5 = decoder.decode(stream, TestIA5.class);
+        assertNotNull(valIA5);
+        assertEquals(val.getValue(), coderTestUtils.createTestIA5().getValue());
+
         stream = new ByteArrayInputStream(coderTestUtils.createTestOCTBytes());
         TestOCT valOct = decoder.decode(stream, TestOCT.class);
         assertNotNull(valOct);
